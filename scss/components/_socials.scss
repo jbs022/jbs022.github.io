@@ -1,0 +1,73 @@
+
+/* ============================================= */
+/*                 Socials Classes               */
+/* ============================================= */
+
+.socials-callout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: $size-600;
+
+    padding: $size-600;
+    background-color: $clr-secondary-dark;
+    border-radius: $size-500;
+
+    @include mq('sm') {
+        flex-direction: row;
+    }
+
+    @include mq('md') {
+        flex-direction: column;
+    }
+
+    @include mq('lg') {
+        flex-direction: row;
+    }
+
+    & h3 {
+        margin-bottom: 0;
+    }
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: $size-300;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+        display: inherit;
+    }
+
+    & a {
+        width: $size-500;
+        height: $size-500;
+        padding: $size-300;
+        border: 2px solid $clr-cta;
+        border-radius: 50%;
+        transition: 0.15s all;
+
+        & svg {
+            fill: $clr-cta;
+            aspect-ratio: 1;
+        }
+    }
+
+    & a:hover,
+    & a:focus-visible {
+        background-color: $clr-cta;
+
+        & svg {
+            fill: $clr-primary-dark;
+        }
+    }
+
+    & a:active {
+        transform: scale(0.9);
+    }
+}

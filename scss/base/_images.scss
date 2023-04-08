@@ -1,0 +1,37 @@
+
+/* ============================================= */
+/*                    Images                     */
+/* ============================================= */
+
+.img-fluid {
+    width: 80%;
+    height: auto;
+
+    @include mq('md') {
+        width: 100%;
+    }
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-rounded {
+    border-radius: $size-200;
+
+    @include mq('md') {
+        border-radius: $size-300;
+    }
+
+    @include mq('xl') {
+        border-radius: $size-400;
+    }
+}
+
+.img-bg-green {
+    background-color: $clr-accent-light;
+}
+
+.img-bg-white {
+    background-color: $clr-primary-light;
+}

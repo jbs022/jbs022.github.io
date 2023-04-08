@@ -1,0 +1,228 @@
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+// Logo 
+.logo {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover,
+  &:focus-visible {
+    color: $clr-accent-light;
+  }
+}
+
+// Header navigation
+.primary-header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  @include mq('md') {
+    padding-block: $size-200;
+  }
+}
+
+.primary-nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.primary-nav {
+  margin-left: auto;
+
+  &__nav-list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & a {
+      padding: $size-400 $size-500;
+      font-size: $fs-xs;
+      font-weight: $fw-semi-bold;
+      color: $clr-cta;
+      text-decoration: none;
+      transition: color 0.15s;
+
+      &:hover,
+      &:focus-visible {
+        color: $clr-accent-light;
+      }
+    }
+
+    &__active {
+      position: relative;
+    }
+
+    &__active::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 0;
+      margin-inline: auto;
+      border: 3px solid $clr-accent-light;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .primary-nav {
+    display: none;
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+    width: 15.625rem;
+    background-color: $clr-cta;
+    border-radius: $size-200;
+    box-shadow: 0.25rem 0.25rem 1rem $clr-shadow;
+  
+    &[data-visible] {
+      display: block;
+    }
+
+    &__nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: $size-400;
+
+      padding: $size-600;
+
+      & a {
+        display: block;
+        font-size: $fs-sm;
+        font-weight: $fw-medium;
+        color: $clr-primary-dark;
+      }
+
+      & a:hover,
+      & a:focus-visible {
+        color: $clr-accent-dark;
+      }
+
+      &__active::before {
+        top: 0;
+        width: 0;
+        height: 50%;
+        margin: auto 0;
+      }
+    }
+  }
+  
+  .nav-btns {
+    display: flex;
+    align-items: center;
+    gap: $size-400;
+
+    margin-left: auto;
+  
+    .mobile-nav-toggle {
+      display: block;
+      padding: 0.5em;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+
+      &__menu-icon,
+      &__menu-close-icon {
+        aspect-ratio: 1;
+      }
+    
+      &[aria-expanded="false"] .mobile-nav-toggle__menu-icon {
+        display: block;
+        width: $size-500;
+      }
+
+      &[aria-expanded="true"] .mobile-nav-toggle__menu-icon {
+        display: none;
+      }
+    
+      &[aria-expanded="false"] .mobile-nav-toggle__menu-close-icon {
+        display: none;
+      }
+
+      &[aria-expanded="true"] .mobile-nav-toggle__menu-close-icon {
+        display: block;
+        width: $size-500;
+      }
+    }
+  }
+}
+
+// Footer navigation
+.footer-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: $size-300;
+}
+
+.footer-nav {
+  &__nav-list {
+    display: flex;
+  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li:first-child a {
+      padding-left: 0;
+    }
+
+    // Specific to 'Home' link, adjusts green hr alignment
+    & li:first-child a.footer-nav__nav-list__active::before{
+      margin: 0 0 0 0.15rem;
+    }
+
+    & a {
+      padding: $size-400 $size-500;
+      font-size: $fs-xs;
+      font-weight: $fw-semi-bold;
+      color: $clr-cta;
+      text-decoration: none;
+
+      &:hover {
+        font-style: italic;
+      }
+    }
+
+    &__active {
+      position: relative;
+    }
+
+    &__active::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -0.25rem;
+      left: 0;
+      width: 50%;
+      height: 0;
+      margin-inline: auto;
+      border: 3px solid $clr-accent-light;
+      border-radius: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-nav-wrapper {
+    flex-direction: column;
+    gap: $size-700;
+
+    margin-top: $size-500;
+  }
+}

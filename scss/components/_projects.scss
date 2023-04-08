@@ -1,0 +1,80 @@
+
+/* ============================================= */
+/*              Projects Classes                 */
+/* ============================================= */
+
+.projects-grid {
+    --min-column-size: 22.5rem; // Changes the minimum size of the cards
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+    gap: $size-600;
+
+    margin: $size-500 0 $size-700;
+    padding: 0;
+    list-style: none;
+
+    &__project {
+        display: flex;
+        flex-direction: column;
+
+        background-color: $clr-accent-dark;
+        border-radius: $size-500;
+
+        &__thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: $size-500 $size-500 0 0;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+            padding: $size-400;
+
+            @include mq('lg') {
+                padding: $size-500;
+            }
+
+            &__tech-tags-cluster {
+                display: flex;
+                flex-wrap: wrap;
+                gap: $size-200;
+
+                margin-bottom: $size-600;
+                padding: 0;
+                list-style: none;
+            }
+
+            &__tech-tags-cluster__tag {
+                padding: $size-100 $size-400;
+                background-color: $clr-secondary-dark;
+                border-radius: 50rem;
+            }
+
+            &__btns {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: $size-400;
+
+                margin-top: auto;
+            }
+
+            &__btns--single {
+                grid-template-columns: 1fr;
+            }
+
+            &__btns a[role="button"] {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: $size-300;
+            }
+
+            &__btns a[role="button"] i {
+                font-size: $fs-sm;
+            }
+        }
+    }
+}

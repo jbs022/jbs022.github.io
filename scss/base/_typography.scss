@@ -1,0 +1,171 @@
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+h1, h2 {
+    margin: 0 0 2.5rem;
+}
+
+h3, h4, h5, h6 {
+    margin: 0 0 1rem;
+}
+
+p {
+    margin-block: 0 1rem;
+}
+
+.fs-heading {
+    font-family: $ff-primary;
+    line-height: 1.3;
+}
+
+.fs-3xs {
+    font-size: $fs-3xs;
+}
+.fs-2xs {
+    font-size: $fs-2xs;
+}
+.fs-xs {
+    font-size: $fs-xs;
+}
+.fs-sm {
+    font-size: $fs-sm;
+}
+.fs-md {
+    font-size: $fs-md;
+}
+.fs-lg {
+    font-size: $fs-lg;
+}
+.fs-xl {
+    font-size: $fs-xl;
+}
+.fs-2xl {
+    font-size: $fs-2xl;
+}
+.fs-3xl {
+    font-size: $fs-3xl;
+}
+
+.fw-regular {
+    font-weight: $fw-regular;
+}
+.fw-medium {
+    font-weight: $fw-medium;
+}
+.fw-semi-bold {
+    font-weight: $fw-semi-bold;
+}
+.fw-bold {
+    font-weight: $fw-bold;
+}
+.fw-extra-bold {
+    font-weight: $fw-extra-bold;
+}
+.fw-black {
+    font-weight: $fw-black;
+}
+
+.text-primary-light {
+    color: $clr-primary-light;
+}
+.text-primary-dark {
+    color: $clr-primary-dark;
+}
+.text-secondary-light {
+    color: $clr-secondary-light;
+}
+.text-secondary-dark {
+    color: $clr-secondary-dark;
+}
+.text-accent-dark {
+    color: $clr-accent-dark;
+}
+.text-accent-light {
+    color: $clr-accent-light;
+}
+.text-cta {
+    color: $clr-cta;
+}
+
+.text-center {
+    text-align: center;
+
+    @include mq('sm') {
+        &-sm {
+            text-align: center;
+        }
+    }
+
+    @include mq('md') {
+        &-md {
+            text-align: center;
+        }
+    }
+
+    @include mq('lg') {
+        &-lg {
+            text-align: center;
+        }
+    }
+
+    @include mq('xl') {
+        &-xl {
+            text-align: center;
+        }
+    }
+}
+.text-left {
+    text-align: left;
+
+    @include mq('sm') {
+        &-sm {
+            text-align: left;
+        }
+    }
+
+    @include mq('md') {
+        &-md {
+            text-align: left;
+        }
+    }
+
+    @include mq('lg') {
+        &-lg {
+            text-align: left;
+        }
+    }
+
+    @include mq('xl') {
+        &-xl {
+            text-align: left;
+        }
+    }
+}
+.text-right {
+    text-align: right;
+
+    @include mq('sm') {
+        &-sm {
+            text-align: right;
+        }
+    }
+
+    @include mq('md') {
+        &-md {
+            text-align: right;
+        }
+    }
+
+    @include mq('lg') {
+        &-lg {
+            text-align: right;
+        }
+    }
+
+    @include mq('xl') {
+        &-xl {
+            text-align: right;
+        }
+    }
+}

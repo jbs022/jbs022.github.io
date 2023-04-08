@@ -1,0 +1,12 @@
+/* ============================================= */
+/*           Background Shape Classes            */
+/* ============================================= */
+
+// Wavy bottom background
+.wavy-bg {
+    --mask:
+      radial-gradient(3.69rem at 50% calc(100% - 5.10rem),#000 99%,#0000 101%) calc(50% - 4rem) 0/8rem 100%,
+      radial-gradient(3.69rem at 50% calc(100% + 3.10rem),#0000 99%,#000 101%) 50% calc(100% - 2rem)/8rem 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }

@@ -1,0 +1,32 @@
+
+/* ============================================= */
+/*             Technologies Classes              */
+/* ============================================= */
+
+.technologies {
+    --min-column-size: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+    gap: $size-700;
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include mq('lg') {
+        --min-column-size: 4rem;
+    }
+
+    &__icon {
+        display: flex;
+    }
+
+    &__icon img {
+        align-self: center;
+
+        width: 100%;
+        max-width: 70px;
+        height: auto;
+        max-height: 70px;
+    }
+}

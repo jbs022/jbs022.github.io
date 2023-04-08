@@ -1,0 +1,58 @@
+
+/* ============================================= */
+/*                  Benefits                     */
+/* ============================================= */
+
+.benefits-grid {
+    display: grid;
+    gap: $size-600;
+
+    margin-top: $size-600;
+    margin-bottom: $size-800;
+
+    @include mq('md') {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        gap: $size-500;
+
+        margin-top: $size-800;
+        margin-bottom: $size-900;
+    }
+
+    @include mq('lg') {
+        gap: $size-700;
+    }
+
+    &__benefit {
+        display: flex;
+        flex-direction: column;
+
+        padding: $size-700 $size-500;
+        background-color: $clr-accent-dark;
+        border: 4px solid $clr-accent-light;
+        border-radius: $size-600 0 $size-600 0;
+        text-align: center;
+
+        &__image-container {
+            display: flex;
+
+            width: min-content;
+            margin: 0 auto $size-400;
+            padding: $size-500;
+            background-color: $clr-accent-light;
+            border-radius: 50%;
+        }
+
+        &__image-container img {
+            align-self: center;
+
+            width: $size-700;
+            height: auto;
+            aspect-ratio: 1;
+        }
+
+        & p {
+            margin-bottom: 0;
+        }
+    }
+}
