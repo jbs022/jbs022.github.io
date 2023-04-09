@@ -39,67 +39,67 @@ window.addEventListener('scroll', () => {
 });
 
 // Form validation
-// const form = document.getElementById('form');
-// const name = document.getElementById('name');
-// const email = document.getElementById('email');
-// const message = document.getElementById('message');
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
 
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
+form.addEventListener('submit', e => {
+    e.preventDefault();
 
-//     validateInputs();
-// });
+    validateInputs();
+});
 
-// const setError = (element, message) => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error-message');
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error-message');
 
-//     errorDisplay.innerText = message;
-//     errorDisplay.style.display = "block";
-//     inputControl.classList.add('error');
-//     inputControl.classList.remove('success');
-// }
+    errorDisplay.innerText = message;
+    errorDisplay.style.display = "block";
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
 
-// const setSuccess = element => {
-//     const inputControl = element.parentElement;
-//     const errorDisplay = inputControl.querySelector('.error-message');
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error-message');
 
-//     errorDisplay.innerText = '';
-//     errorDisplay.style.display = "none";
-//     inputControl.classList.add('success');
-//     inputControl.classList.remove('error');
-// }
+    errorDisplay.innerText = '';
+    errorDisplay.style.display = "none";
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+}
 
-// const isValidEmail = email => {
-//     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(String(email).toLowerCase());
-// }
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
-// const validateInputs = () => {
-//     const nameValue = name.value.trim();
-//     const emailValue = email.value.trim();
-//     const messageValue = message.value.trim();
+const validateInputs = () => {
+    const nameValue = name.value.trim();
+    const emailValue = email.value.trim();
+    const messageValue = message.value.trim();
 
-//     if (nameValue === '') {
-//         setError(name, "Please enter your name");
-//     } else {
-//         setSuccess(name);
-//     }
+    if (nameValue === '') {
+        setError(name, "Please enter your name");
+    } else {
+        setSuccess(name);
+    }
     
-//     if (emailValue === '') {
-//         setError(email, "Please enter your email");
-//     } else if (!isValidEmail(emailValue)) {
-//         setError(email, "Please provide a valid email. Example: john.smith@gmail.com");
-//     } else {
-//         setSuccess(email);
-//     }
+    if (emailValue === '') {
+        setError(email, "Please enter your email");
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, "Please provide a valid email. Example: john.smith@gmail.com");
+    } else {
+        setSuccess(email);
+    }
 
-//     if (messageValue === '') {
-//         setError(message, "Please enter your message");
-//     } else {
-//         setSuccess(message);
-//     }
-// }
+    if (messageValue === '') {
+        setError(message, "Please enter your message");
+    } else {
+        setSuccess(message);
+    }
+}
 
 // Get the copyright year for the footer
 document.getElementById('currentYear').innerHTML = new Date().getFullYear();
