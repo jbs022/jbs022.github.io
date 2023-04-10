@@ -4,9 +4,9 @@
 /* ============================================= */
 
 .projects-grid {
-    --min-column-size: 22.5rem; // Changes the minimum size of the cards
+    $min-column-size: 22.5rem; // Changes the minimum size of the cards
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min($min-column-size, 100%), 1fr));
     gap: $size-600;
 
     margin: $size-500 0 $size-700;

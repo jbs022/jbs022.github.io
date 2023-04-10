@@ -4,10 +4,10 @@
 /* ============================================= */
 
 .container {
-    --max-width: 87.5rem; // 1400px
-    --horizontal-padding: 1rem;
+    $max-width: 87.5rem; // 1400px
+    $horizontal-padding: 1rem;
 
-    width: min(var(--max-width), 100% - (var(--horizontal-padding) * 2));
+    width: min($max-width, 100% - ($horizontal-padding * 2));
     margin-inline: auto;
 }
 
