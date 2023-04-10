@@ -137,7 +137,7 @@
 
       &__menu-icon,
       &__menu-close-icon {
-        aspect-ratio: 1;
+        aspect-ratio: 1 / 1;
       }
     
       &[aria-expanded="false"] .mobile-nav-toggle__menu-icon {
